@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
+    <style>
+      body{
+        background-color: #141414;
+        color: white;
+      }
+    </style>
+    <title>text to speech</title>
+  </head>
+  <body id="body">
+    <div class="container-sm" id="immediate">
+      <h1 class="text-center mt-5 display-4 p-4" id="title">
+        <i class="bi bi-chat-square-text"></i>  TEXT TO SPEECH <i class="bi bi-soundwave"></i>
+      </h1>
+      <div class="row justify-content-center text-center">
+        <div class="col-8 col-lg-6" id="why">
+          <textarea class="form-control p-2" id="text" cols="30" rows="4" placeholder="type here"">
+</textarea
+          >
+          <div class="form-group p-3">
+            <label for="rate" class="form-label ">rate</label>
+            <div id="rate-value" class="float-end text-info" >1</div>
+            <input
+              type="range"
+              class="form-range"
+              id="rate"
+              min="0.5"
+              max="2"
+              value="1"
+              step="0.01"
+            />
+          </div>
+          <div class="form-group p-3">
+            <label for="Pitch" class="form-label ">Pitch</label>
+            <div id="Pitch-value" class="float-end text-info">1</div>
+            <input
+              type="range"
+              class="form-range"
+              id="Pitch"
+              min="0.5"
+              max="2"
+              value="1"
+              step="0.01"
+            />
+          </div>
+          
+            <select class="form-select form-select-lg mt-4 p-3" id="voices"></select>
+            <div id="">  
+              <button class="btn btn-outline-light ps-2 ms-2 mt-3" id="pause">pause</button>
+              <button class="btn btn-outline-light ps-2 ms-2  mt-3" id="btn">speak iteak it</button>
+              <button class="btn btn-outline-light ps-2 ms-2  mt-3" id="btnstop">stop</button>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="texttospeech.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
